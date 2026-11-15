@@ -1,0 +1,396 @@
+<LPFile Version="2.1">
+ <LPParams LPChannelOffset="0" LPDisplayMode="0" LPDefaultStartScenes="-1|-1|-1|-1|-1" LPDrawPicture="0" LPSAAreas="-1|-1|-1|-1|-1" LPPicture="" LPLiveBoard="0" ShowVersion="2.3.4">
+  <LPEffectsTrigger LPMidiFeedBack="0" LPAutoRelease="0" LPOnOff="1" LPPlayInCurPage="1"/>
+ </LPParams>
+ <LPPatch LPNumber="12">
+  <LPFixtures>
+   <LPLibrary LPName="Postlab/Postlab Laser.cp1" LPMatrixId="-1">
+    <LPProfile LPFixtPath="Postlab/Postlab Laser.cp1">
+     <LPModes LPNbMode="1">
+      <LPMode LPNbChannel="16">
+       <LPProperties LPName="16ch" LPFixtType="4" LP3DObject="System/3D/LASER/LASER1.png" LPPicturePath="LASER 1" LPPictureIndex="0" LPSizeX="50" LPSizeY="50" LPSizeZ="50" LPIntensity="10" LPBeamClr="65280" LPBeamOpening="16" LPBeamNumber="1" LPBeamNumberY="0" LPMatrixProfile="0" LPDim="0" LPAmpliPan="540" LPAmpliTilt="270" LPTimePan="0" LPTimeTilt="0" LPPanTiltRot="0">
+        <LPBeams LPNbBeam="1">
+         <LPBeam LPBeamZoom="100" LPBeamPosX="0" LPBeamPosY="0" LPShapeType="0"/>
+        </LPBeams>
+       </LPProperties>
+       <LPChannel LPChannelName="Pan X" LPChannelType="1" LPChannelMSB="0" LPChannelLSB="0" LPChannelCommon="1">
+        <LPPresets LPNbPreset="0"/>
+       </LPChannel>
+       <LPChannel LPChannelName="Continuous Pan X" LPChannelType="34" LPChannelMSB="0" LPChannelLSB="0" LPChannelCommon="1">
+        <LPPresets LPNbPreset="0"/>
+       </LPChannel>
+       <LPChannel LPChannelName="Pan Y Head 1" LPChannelType="2" LPChannelMSB="0" LPChannelLSB="0" LPChannelCommon="1">
+        <LPPresets LPNbPreset="0"/>
+       </LPChannel>
+       <LPChannel LPChannelName="Pan Y Head 2" LPChannelType="2" LPChannelMSB="0" LPChannelLSB="0" LPChannelCommon="1">
+        <LPPresets LPNbPreset="0"/>
+       </LPChannel>
+       <LPChannel LPChannelName="Pan Y Head 3" LPChannelType="2" LPChannelMSB="0" LPChannelLSB="0" LPChannelCommon="1">
+        <LPPresets LPNbPreset="0"/>
+       </LPChannel>
+       <LPChannel LPChannelName="Pan Speed" LPChannelType="18" LPChannelMSB="0" LPChannelLSB="0" LPChannelCommon="1">
+        <LPPresets LPNbPreset="0"/>
+       </LPChannel>
+       <LPChannel LPChannelName="Dimmer" LPChannelType="7" LPChannelMSB="0" LPChannelLSB="0" LPChannelCommon="1">
+        <LPPresets LPNbPreset="1">
+         <LPPreset LPPresetName="Dimmer" LPPresetDmxStart="0" LPPresetDmxEnd="255" LPPresetType="4" LPPresetIcon="System/Presets/Dimmer/Dimmer.png" LPPresetDmxDefault="255" LPPresetDefaultPreset="1" LPPresetParamMin="0" LPPresetParamMax="100"/>
+        </LPPresets>
+       </LPChannel>
+       <LPChannel LPChannelName="Strobe" LPChannelType="15" LPChannelMSB="0" LPChannelLSB="0" LPChannelCommon="1">
+        <LPPresets LPNbPreset="0"/>
+       </LPChannel>
+       <LPChannel LPChannelName="Automatic Color" LPChannelType="33" LPChannelMSB="0" LPChannelLSB="0" LPChannelCommon="1">
+        <LPPresets LPNbPreset="0"/>
+       </LPChannel>
+       <LPChannel LPChannelName="Automatic Show" LPChannelType="33" LPChannelMSB="0" LPChannelLSB="0" LPChannelCommon="1">
+        <LPPresets LPNbPreset="0"/>
+       </LPChannel>
+       <LPChannel LPChannelName="Automatic Speed" LPChannelType="18" LPChannelMSB="0" LPChannelLSB="0" LPChannelCommon="1">
+        <LPPresets LPNbPreset="0"/>
+       </LPChannel>
+       <LPChannel LPChannelName="Red" LPChannelType="25" LPChannelMSB="0" LPChannelLSB="0" LPChannelCommon="1">
+        <LPPresets LPNbPreset="0"/>
+       </LPChannel>
+       <LPChannel LPChannelName="Green" LPChannelType="26" LPChannelMSB="0" LPChannelLSB="0" LPChannelCommon="1">
+        <LPPresets LPNbPreset="0"/>
+       </LPChannel>
+       <LPChannel LPChannelName="Blue" LPChannelType="27" LPChannelMSB="0" LPChannelLSB="0" LPChannelCommon="1">
+        <LPPresets LPNbPreset="0"/>
+       </LPChannel>
+       <LPChannel LPChannelName="White" LPChannelType="31" LPChannelMSB="0" LPChannelLSB="0" LPChannelCommon="1" LPChannelColorMin="0" LPChannelColorMax="16777215">
+        <LPPresets LPNbPreset="0"/>
+       </LPChannel>
+       <LPChannel LPChannelName="Reset" LPChannelType="38" LPChannelMSB="0" LPChannelLSB="0" LPChannelCommon="1">
+        <LPPresets LPNbPreset="0"/>
+       </LPChannel>
+      </LPMode>
+     </LPModes>
+    </LPProfile>
+   </LPLibrary>
+   <LPFixture LPName="Laser" LPId="1" LPUniverse="0" LPAddress="0" LPAngle="0" LPRdmId="0" LPInvPan="0" LPInvTilt="0" LPGroupParams="60;60;100;2"/>
+  </LPFixtures>
+  <LPFixtures>
+   <LPLibrary LPName="Postlab/Postlab Moving Head.cp1" LPMatrixId="-1">
+    <LPProfile LPFixtPath="Postlab/Postlab Moving Head.cp1">
+     <LPModes LPNbMode="1">
+      <LPMode LPNbChannel="9">
+       <LPProperties LPName="9ch" LPFixtType="3" LP3DObject="System/3D/MH/MH1.png" LPPicturePath="MOVING HEAD 1" LPPictureIndex="0" LPSizeX="50" LPSizeY="50" LPSizeZ="50" LPIntensity="10" LPBeamClr="65280" LPBeamOpening="16" LPBeamNumber="1" LPBeamNumberY="0" LPMatrixProfile="0" LPDim="0" LPAmpliPan="540" LPAmpliTilt="270" LPTimePan="0" LPTimeTilt="0" LPPanTiltRot="0">
+        <LPBeams LPNbBeam="1">
+         <LPBeam LPBeamZoom="100" LPBeamPosX="0" LPBeamPosY="0" LPShapeType="0"/>
+        </LPBeams>
+       </LPProperties>
+       <LPChannel LPChannelName="Pan" LPChannelType="1" LPChannelMSB="0" LPChannelLSB="0" LPChannelCommon="1">
+        <LPPresets LPNbPreset="0"/>
+       </LPChannel>
+       <LPChannel LPChannelName="Tilt" LPChannelType="2" LPChannelMSB="0" LPChannelLSB="0" LPChannelCommon="1">
+        <LPPresets LPNbPreset="0"/>
+       </LPChannel>
+       <LPChannel LPChannelName="Color" LPChannelType="5" LPChannelMSB="0" LPChannelLSB="0" LPChannelCommon="1">
+        <LPPresets LPNbPreset="0"/>
+       </LPChannel>
+       <LPChannel LPChannelName="Gobo" LPChannelType="8" LPChannelMSB="0" LPChannelLSB="0" LPChannelCommon="1">
+        <LPPresets LPNbPreset="0"/>
+       </LPChannel>
+       <LPChannel LPChannelName="Strobe" LPChannelType="15" LPChannelMSB="0" LPChannelLSB="0" LPChannelCommon="1">
+        <LPPresets LPNbPreset="0"/>
+       </LPChannel>
+       <LPChannel LPChannelName="Dimmer" LPChannelType="7" LPChannelMSB="0" LPChannelLSB="0" LPChannelCommon="1">
+        <LPPresets LPNbPreset="1">
+         <LPPreset LPPresetName="Dimmer" LPPresetDmxStart="0" LPPresetDmxEnd="255" LPPresetType="4" LPPresetIcon="System/Presets/Dimmer/Dimmer.png" LPPresetDmxDefault="255" LPPresetDefaultPreset="1" LPPresetParamMin="0" LPPresetParamMax="100"/>
+        </LPPresets>
+       </LPChannel>
+       <LPChannel LPChannelName="Tilt Speed" LPChannelType="18" LPChannelMSB="0" LPChannelLSB="0" LPChannelCommon="1">
+        <LPPresets LPNbPreset="0"/>
+       </LPChannel>
+       <LPChannel LPChannelName="Auto" LPChannelType="33" LPChannelMSB="0" LPChannelLSB="0" LPChannelCommon="1">
+        <LPPresets LPNbPreset="0"/>
+       </LPChannel>
+       <LPChannel LPChannelName="Reset" LPChannelType="38" LPChannelMSB="0" LPChannelLSB="0" LPChannelCommon="1">
+        <LPPresets LPNbPreset="0"/>
+       </LPChannel>
+      </LPMode>
+     </LPModes>
+    </LPProfile>
+   </LPLibrary>
+   <LPFixture LPName="Moving Head 1" LPId="2" LPUniverse="0" LPAddress="19" LPAngle="0" LPRdmId="0" LPInvPan="0" LPInvTilt="0" LPGroupParams="60;140;100;2"/>
+   <LPFixture LPName="Moving Head 2" LPId="3" LPUniverse="0" LPAddress="29" LPAngle="0" LPRdmId="0" LPInvPan="0" LPInvTilt="0" LPGroupParams="140;140;100;2"/>
+  </LPFixtures>
+  <LPFixtures>
+   <LPLibrary LPName="Postlab/Postlab Hexagon.cp1" LPMatrixId="-1">
+    <LPProfile LPFixtPath="Postlab/Postlab Hexagon.cp1">
+     <LPModes LPNbMode="1">
+      <LPMode LPNbChannel="7">
+       <LPProperties LPName="7ch" LPFixtType="0" LP3DObject="System/3D/LED/LED5.png" LPPicturePath="LED 4" LPPictureIndex="0" LPSizeX="38" LPSizeY="38" LPSizeZ="7" LPIntensity="10" LPBeamClr="65280" LPBeamOpening="16" LPBeamNumber="1" LPBeamNumberY="0" LPMatrixProfile="0" LPDim="0" LPAmpliPan="540" LPAmpliTilt="270" LPTimePan="0" LPTimeTilt="0" LPPanTiltRot="0">
+        <LPBeams LPNbBeam="1">
+         <LPBeam LPBeamZoom="100" LPBeamPosX="0" LPBeamPosY="0" LPShapeType="0"/>
+        </LPBeams>
+       </LPProperties>
+       <LPChannel LPChannelName="Dimmer" LPChannelType="7" LPChannelMSB="0" LPChannelLSB="0" LPChannelCommon="1">
+        <LPPresets LPNbPreset="1">
+         <LPPreset LPPresetName="Dimmer" LPPresetDmxStart="0" LPPresetDmxEnd="255" LPPresetType="4" LPPresetIcon="System/Presets/Dimmer/Dimmer.png" LPPresetDmxDefault="255" LPPresetDefaultPreset="1" LPPresetParamMin="0" LPPresetParamMax="100"/>
+        </LPPresets>
+       </LPChannel>
+       <LPChannel LPChannelName="Red" LPChannelType="25" LPChannelMSB="0" LPChannelLSB="0" LPChannelCommon="1">
+        <LPPresets LPNbPreset="0"/>
+       </LPChannel>
+       <LPChannel LPChannelName="Green" LPChannelType="26" LPChannelMSB="0" LPChannelLSB="0" LPChannelCommon="1">
+        <LPPresets LPNbPreset="0"/>
+       </LPChannel>
+       <LPChannel LPChannelName="Blue" LPChannelType="27" LPChannelMSB="0" LPChannelLSB="0" LPChannelCommon="1">
+        <LPPresets LPNbPreset="0"/>
+       </LPChannel>
+       <LPChannel LPChannelName="Strobe" LPChannelType="15" LPChannelMSB="0" LPChannelLSB="0" LPChannelCommon="1">
+        <LPPresets LPNbPreset="2">
+         <LPPreset LPPresetName="No Strobe" LPPresetDmxStart="0" LPPresetDmxEnd="7" LPPresetType="19" LPPresetIcon="System/Presets/Shutter/ShutterOpen.png" LPPresetDmxDefault="0" LPPresetDefaultPreset="0"/>
+         <LPPreset LPPresetName="Strobe" LPPresetDmxStart="8" LPPresetDmxEnd="255" LPPresetType="21" LPPresetIcon="System/Presets/Shutter/ShutterStrob.png" LPPresetDmxDefault="131" LPPresetDefaultPreset="0" LPPresetParamMin="0" LPPresetParamMax="250" LPPresetEffectType="0"/>
+        </LPPresets>
+       </LPChannel>
+       <LPChannel LPChannelName="Mode" LPChannelType="33" LPChannelMSB="0" LPChannelLSB="0" LPChannelCommon="1">
+        <LPPresets LPNbPreset="6">
+         <LPPreset LPPresetName="Use first 5 channels" LPPresetDmxStart="0" LPPresetDmxEnd="10" LPPresetType="0" LPPresetIcon="System/Presets/DMX.png" LPPresetDmxDefault="0" LPPresetDefaultPreset="0"/>
+         <LPPreset LPPresetName="Solid Color Mode" LPPresetDmxStart="11" LPPresetDmxEnd="60" LPPresetType="0" LPPresetIcon="System/Presets/Color.png" LPPresetDmxDefault="35" LPPresetDefaultPreset="0"/>
+         <LPPreset LPPresetName="Gradient Mode" LPPresetDmxStart="61" LPPresetDmxEnd="110" LPPresetType="0" LPPresetIcon="System/Presets/Auto/Auto1.png" LPPresetDmxDefault="85" LPPresetDefaultPreset="0"/>
+         <LPPreset LPPresetName="Pulse Mode" LPPresetDmxStart="111" LPPresetDmxEnd="160" LPPresetType="0" LPPresetIcon="System/Presets/Auto/Auto2.png" LPPresetDmxDefault="135" LPPresetDefaultPreset="0"/>
+         <LPPreset LPPresetName="Jump Mode" LPPresetDmxStart="161" LPPresetDmxEnd="210" LPPresetType="0" LPPresetIcon="System/Presets/Auto/Auto3.png" LPPresetDmxDefault="185" LPPresetDefaultPreset="0"/>
+         <LPPreset LPPresetName="Sound Mode" LPPresetDmxStart="211" LPPresetDmxEnd="255" LPPresetType="0" LPPresetIcon="System/Presets/Sound.png" LPPresetDmxDefault="233" LPPresetDefaultPreset="0"/>
+        </LPPresets>
+       </LPChannel>
+       <LPChannel LPChannelName="Speed" LPChannelType="18" LPChannelMSB="0" LPChannelLSB="0" LPChannelCommon="1" LPChannelTarget="5" LPChannelParamMin="10000" LPChannelParamMax="0">
+        <LPPresets LPNbPreset="0"/>
+       </LPChannel>
+      </LPMode>
+     </LPModes>
+    </LPProfile>
+   </LPLibrary>
+   <LPFixture LPName="Hexagon 1" LPId="4" LPUniverse="0" LPAddress="39" LPAngle="0" LPRdmId="0" LPInvPan="0" LPInvTilt="0" LPGroupParams="60;220;100;2"/>
+   <LPFixture LPName="Hexagon 2" LPId="5" LPUniverse="0" LPAddress="49" LPAngle="0" LPRdmId="0" LPInvPan="0" LPInvTilt="0" LPGroupParams="140;220;100;2"/>
+   <LPFixture LPName="Hexagon 3" LPId="6" LPUniverse="0" LPAddress="59" LPAngle="0" LPRdmId="0" LPInvPan="0" LPInvTilt="0" LPGroupParams="220;220;100;2"/>
+   <LPFixture LPName="Hexagon 4" LPId="7" LPUniverse="0" LPAddress="69" LPAngle="0" LPRdmId="0" LPInvPan="0" LPInvTilt="0" LPGroupParams="300;220;100;2"/>
+   <LPFixture LPName="Hexagon 5" LPId="8" LPUniverse="0" LPAddress="79" LPAngle="0" LPRdmId="0" LPInvPan="0" LPInvTilt="0" LPGroupParams="380;220;100;2"/>
+   <LPFixture LPName="Hexagon 6" LPId="9" LPUniverse="0" LPAddress="89" LPAngle="0" LPRdmId="0" LPInvPan="0" LPInvTilt="0" LPGroupParams="460;220;100;2"/>
+   <LPFixture LPName="Hexagon 7" LPId="10" LPUniverse="0" LPAddress="99" LPAngle="0" LPRdmId="0" LPInvPan="0" LPInvTilt="0" LPGroupParams="540;220;100;2"/>
+   <LPFixture LPName="Hexagon 8" LPId="11" LPUniverse="0" LPAddress="109" LPAngle="0" LPRdmId="0" LPInvPan="0" LPInvTilt="0" LPGroupParams="620;220;100;2"/>
+  </LPFixtures>
+  <LPFixtures>
+   <LPLibrary LPName="Postlab/Postlab Smoke.cp1" LPMatrixId="-1">
+    <LPProfile LPFixtPath="Postlab/Postlab Smoke.cp1">
+     <LPModes LPNbMode="1">
+      <LPMode LPNbChannel="1">
+       <LPProperties LPName="1ch" LPFixtType="5" LP3DObject="System/3D/OTHER/OTHER1.png" LPPicturePath="" LPPictureIndex="0" LPSizeX="20" LPSizeY="20" LPSizeZ="20" LPIntensity="10" LPBeamClr="65280" LPBeamOpening="16" LPBeamNumber="1" LPBeamNumberY="0" LPMatrixProfile="0" LPDim="0" LPAmpliPan="540" LPAmpliTilt="270" LPTimePan="0" LPTimeTilt="0" LPPanTiltRot="0">
+        <LPBeams LPNbBeam="1">
+         <LPBeam LPBeamZoom="100" LPBeamPosX="0" LPBeamPosY="0" LPShapeType="0"/>
+        </LPBeams>
+       </LPProperties>
+       <LPChannel LPChannelName="Smoke" LPChannelType="24" LPChannelMSB="0" LPChannelLSB="0" LPChannelCommon="1">
+        <LPPresets LPNbPreset="0"/>
+       </LPChannel>
+      </LPMode>
+     </LPModes>
+    </LPProfile>
+   </LPLibrary>
+   <LPFixture LPName="Smoke" LPId="12" LPUniverse="0" LPAddress="511" LPAngle="0" LPRdmId="0" LPInvPan="0" LPInvTilt="0" LPGroupParams="60;300;100;2"/>
+  </LPFixtures>
+ </LPPatch>
+ <LPGroups LPNumber="1">
+  <LPGlobalGroup LPSceneImageMode="0" LPSceneDrawImageBack="0" LPGrpSel="1;1" LPSceneColorSel="4618470" LPName="General" LPSceneBorderSel="2" LPPage="-1" LPSceneDrawGrid="0" LPSceneImageBack="" LPSceneRectY="400" LPSceneColorBack="16777215" LPZoom="100" LPSceneRectX="800" LPScrollY="0" LPScrollX="0" LPSceneMagnetGrid="0" LPScale="130">
+   <LPMainTrigger LPMidiFeedBack="0" LPAutoRelease="0" LPOnOff="1" LPShortCut="F1" LPPlayInCurPage="0" LPDmxTrigger="1|0|0|127|127|255"/>
+   <LPSubGroups LPNumber="12">
+    <LPSubGroup LPPosX="0" LPPosY="0" LPName="Laser" LPBeams="1;1" CQColor="6579300">
+     <LPMainTrigger LPMidiFeedBack="0" LPAutoRelease="0" LPOnOff="1" LPPlayInCurPage="1"/>
+    </LPSubGroup>
+    <LPSubGroup LPPosX="1" LPPosY="0" LPName="Moving Head 1" LPBeams="2;1" CQColor="6579300">
+     <LPMainTrigger LPMidiFeedBack="0" LPAutoRelease="0" LPOnOff="1" LPPlayInCurPage="1"/>
+    </LPSubGroup>
+    <LPSubGroup LPPosX="2" LPPosY="0" LPName="Moving Head 2" LPBeams="3;1" CQColor="6579300">
+     <LPMainTrigger LPMidiFeedBack="0" LPAutoRelease="0" LPOnOff="1" LPPlayInCurPage="1"/>
+    </LPSubGroup>
+    <LPSubGroup LPPosX="3" LPPosY="0" LPName="Hexagon 1" LPBeams="4;1" CQColor="6579300">
+     <LPMainTrigger LPMidiFeedBack="0" LPAutoRelease="0" LPOnOff="1" LPPlayInCurPage="1"/>
+    </LPSubGroup>
+    <LPSubGroup LPPosX="4" LPPosY="0" LPName="Hexagon 2" LPBeams="5;1" CQColor="6579300">
+     <LPMainTrigger LPMidiFeedBack="0" LPAutoRelease="0" LPOnOff="1" LPPlayInCurPage="1"/>
+    </LPSubGroup>
+    <LPSubGroup LPPosX="5" LPPosY="0" LPName="Hexagon 3" LPBeams="6;1" CQColor="6579300">
+     <LPMainTrigger LPMidiFeedBack="0" LPAutoRelease="0" LPOnOff="1" LPPlayInCurPage="1"/>
+    </LPSubGroup>
+    <LPSubGroup LPPosX="6" LPPosY="0" LPName="Hexagon 4" LPBeams="7;1" CQColor="6579300">
+     <LPMainTrigger LPMidiFeedBack="0" LPAutoRelease="0" LPOnOff="1" LPPlayInCurPage="1"/>
+    </LPSubGroup>
+    <LPSubGroup LPPosX="7" LPPosY="0" LPName="Hexagon 5" LPBeams="8;1" CQColor="6579300">
+     <LPMainTrigger LPMidiFeedBack="0" LPAutoRelease="0" LPOnOff="1" LPPlayInCurPage="1"/>
+    </LPSubGroup>
+    <LPSubGroup LPPosX="8" LPPosY="0" LPName="Hexagon 6" LPBeams="9;1" CQColor="6579300">
+     <LPMainTrigger LPMidiFeedBack="0" LPAutoRelease="0" LPOnOff="1" LPPlayInCurPage="1"/>
+    </LPSubGroup>
+    <LPSubGroup LPPosX="9" LPPosY="0" LPName="Hexagon 7" LPBeams="10;1" CQColor="6579300">
+     <LPMainTrigger LPMidiFeedBack="0" LPAutoRelease="0" LPOnOff="1" LPPlayInCurPage="1"/>
+    </LPSubGroup>
+    <LPSubGroup LPPosX="10" LPPosY="0" LPName="Hexagon 8" LPBeams="11;1" CQColor="6579300">
+     <LPMainTrigger LPMidiFeedBack="0" LPAutoRelease="0" LPOnOff="1" LPPlayInCurPage="1"/>
+    </LPSubGroup>
+    <LPSubGroup LPPosX="11" LPPosY="0" LPName="Smoke" LPBeams="12;1" CQColor="6579300">
+     <LPMainTrigger LPMidiFeedBack="0" LPAutoRelease="0" LPOnOff="1" LPPlayInCurPage="1"/>
+    </LPSubGroup>
+   </LPSubGroups>
+   <LPPresetConfigs>
+    <LPProfileConfig LPFixtPath="Postlab/Postlab Laser.cp1">
+     <LPPresetConfig LPPosX="-1" LPShowLSB="0" LPChannel="1" LPChanIndType="0" LPDisplayType="2" LPPrIconSize="32"/>
+     <LPPresetConfig LPPosX="-1" LPShowLSB="0" LPChannel="34" LPChanIndType="0" LPDisplayType="2" LPPrIconSize="32"/>
+     <LPPresetConfig LPPosX="-1" LPShowLSB="0" LPChannel="2" LPChanIndType="0" LPDisplayType="2" LPPrIconSize="32"/>
+     <LPPresetConfig LPPosX="-1" LPShowLSB="0" LPChannel="18" LPChanIndType="0" LPDisplayType="2" LPPrIconSize="32"/>
+     <LPPresetConfig LPPosX="-1" LPShowLSB="0" LPChannel="7" LPChanIndType="0" LPDisplayType="2" LPPrIconSize="32"/>
+     <LPPresetConfig LPPosX="-1" LPShowLSB="0" LPChannel="15" LPChanIndType="0" LPDisplayType="2" LPPrIconSize="32"/>
+     <LPPresetConfig LPPosX="-1" LPShowLSB="0" LPChannel="33" LPChanIndType="0" LPDisplayType="2" LPPrIconSize="32"/>
+     <LPPresetConfig LPPosX="-1" LPShowLSB="0" LPChannel="25" LPChanIndType="0" LPDisplayType="2" LPPrIconSize="32"/>
+     <LPPresetConfig LPPosX="-1" LPShowLSB="0" LPChannel="26" LPChanIndType="0" LPDisplayType="2" LPPrIconSize="32"/>
+     <LPPresetConfig LPPosX="-1" LPShowLSB="0" LPChannel="27" LPChanIndType="0" LPDisplayType="2" LPPrIconSize="32"/>
+     <LPPresetConfig LPPosX="-1" LPShowLSB="0" LPChannel="31" LPChanIndType="0" LPDisplayType="2" LPPrIconSize="32"/>
+     <LPPresetConfig LPPosX="-1" LPShowLSB="0" LPChannel="38" LPChanIndType="0" LPDisplayType="2" LPPrIconSize="32"/>
+    </LPProfileConfig>
+    <LPProfileConfig LPFixtPath="Postlab/Postlab Moving Head.cp1">
+     <LPPresetConfig LPPosX="-1" LPShowLSB="0" LPChannel="1" LPChanIndType="0" LPDisplayType="2" LPPrIconSize="32"/>
+     <LPPresetConfig LPPosX="-1" LPShowLSB="0" LPChannel="2" LPChanIndType="0" LPDisplayType="2" LPPrIconSize="32"/>
+     <LPPresetConfig LPPosX="-1" LPShowLSB="0" LPChannel="5" LPChanIndType="0" LPDisplayType="2" LPPrIconSize="32"/>
+     <LPPresetConfig LPPosX="-1" LPShowLSB="0" LPChannel="8" LPChanIndType="0" LPDisplayType="2" LPPrIconSize="32"/>
+     <LPPresetConfig LPPosX="-1" LPShowLSB="0" LPChannel="15" LPChanIndType="0" LPDisplayType="2" LPPrIconSize="32"/>
+     <LPPresetConfig LPPosX="-1" LPShowLSB="0" LPChannel="7" LPChanIndType="0" LPDisplayType="2" LPPrIconSize="32"/>
+     <LPPresetConfig LPPosX="-1" LPShowLSB="0" LPChannel="18" LPChanIndType="0" LPDisplayType="2" LPPrIconSize="32"/>
+     <LPPresetConfig LPPosX="-1" LPShowLSB="0" LPChannel="33" LPChanIndType="0" LPDisplayType="2" LPPrIconSize="32"/>
+     <LPPresetConfig LPPosX="-1" LPShowLSB="0" LPChannel="38" LPChanIndType="0" LPDisplayType="2" LPPrIconSize="32"/>
+    </LPProfileConfig>
+    <LPProfileConfig LPFixtPath="Postlab/Postlab Hexagon.cp1">
+     <LPPresetConfig LPPosX="-1" LPShowLSB="0" LPChannel="7" LPChanIndType="0" LPDisplayType="2" LPPrIconSize="32"/>
+     <LPPresetConfig LPPosX="-1" LPShowLSB="0" LPChannel="25" LPChanIndType="0" LPDisplayType="2" LPPrIconSize="32"/>
+     <LPPresetConfig LPPosX="-1" LPShowLSB="0" LPChannel="26" LPChanIndType="0" LPDisplayType="2" LPPrIconSize="32"/>
+     <LPPresetConfig LPPosX="-1" LPShowLSB="0" LPChannel="27" LPChanIndType="0" LPDisplayType="2" LPPrIconSize="32"/>
+     <LPPresetConfig LPPosX="-1" LPShowLSB="0" LPChannel="15" LPChanIndType="0" LPDisplayType="2" LPPrIconSize="32"/>
+     <LPPresetConfig LPPosX="-1" LPShowLSB="0" LPChannel="33" LPChanIndType="0" LPDisplayType="2" LPPrIconSize="32"/>
+     <LPPresetConfig LPPosX="-1" LPShowLSB="0" LPChannel="18" LPChanIndType="0" LPDisplayType="2" LPPrIconSize="32"/>
+    </LPProfileConfig>
+    <LPProfileConfig LPFixtPath="Postlab/Postlab Smoke.cp1">
+     <LPPresetConfig LPPosX="-1" LPShowLSB="0" LPChannel="24" LPChanIndType="0" LPDisplayType="2" LPPrIconSize="32"/>
+    </LPProfileConfig>
+   </LPPresetConfigs>
+  </LPGlobalGroup>
+ </LPGroups>
+ <LPPages LPNumber="1">
+  <LPPage LPDisplayMode="0" LPName="Scenes" LPLiveFloating="0" LPDrawPicture="0" LPFloating="0" LPPicture="" LPLiveBoard="1" LPDefaultTab="0">
+   <LPMainTrigger LPMidiFeedBack="0" LPAutoRelease="0" LPOnOff="1" LPPlayInCurPage="1"/>
+   <LPScenes LPNumber="1">
+    <LPScene LPFadeOutDelay="0" LPRelease="0" LPName="Scene 1" LPLoop="0" LPSoundState="0" LPFadeOutList="0" LPFadeOutId="-1" LPSoundCoeff="25" LPSoundMode="0" LPCustomFadeIn="0" LPBeatMode="0" LPDisplayTime="1" LPDisplayClr="13804915" LPFadeIn="0" LPFadeOut="0" LPDefaultButPic="1" LPSound="" LPDisplayParams="1" LPFadeInList="0" LPCheckInList="0" LPDynamicFadeIn="1" LPPlaySound="0" LPCustomFadeOut="0" LPButtonSize="2" LPBeatState="0" LPDynamicFadeOut="1" LPSoundType="-1" LPBeatType="-1" LPFadeInId="-1" LPCheckOutList="0" LPFadeInDelay="0" LPJumpMode="0" LPPosX="0" LPPosY="0" LPDisplayName="1" LPPwd="" LPPriority="1">
+     <LPSaDatas LPNumber="5">
+      <LPSaData LPSASceneIndex="-1" LPMemory="0"/>
+      <LPSaData LPSASceneIndex="-1" LPMemory="0"/>
+      <LPSaData LPSASceneIndex="-1" LPMemory="0"/>
+      <LPSaData LPSASceneIndex="-1" LPMemory="0"/>
+      <LPSaData LPSASceneIndex="-1" LPMemory="0"/>
+     </LPSaDatas>
+     <LPMainTrigger LPMidiFeedBack="0" LPAutoRelease="0" LPOnOff="1" LPPlayInCurPage="1"/>
+     <LPActivUniverses LPNumber="4">
+      <LPActivUniverse LPActivBuffer="0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000" LPUniverse="0"/>
+     </LPActivUniverses>
+     <LPSteps LPNumber="0"/>
+    </LPScene>
+   </LPScenes>
+  </LPPage>
+ </LPPages>
+ <LPEffScenes LPNumber="7">
+  <LPEffScene LPFadeOut="0" LPPosX="0" LPButtonSize="2" LPLoop="0" LPName="RGB" LPPosY="0" LPFadeIn="0" LPPriority="1">
+   <LPMainTrigger LPMidiFeedBack="0" LPAutoRelease="0" LPOnOff="1" LPPlayInCurPage="1"/>
+   <LPEffect LPEType="3" LPEDuration="10000" LPEMatrix="0" LPELoops="1" LPEPhi="0" LPEIntensity="100">
+    <LPEParams LPENumber="4">
+     <LPECurveParam LPEType="0" LPEOffset2="0" LPEFade="40" LPEChanNum="0" LPEAllDir="0" LPERatio="502" LPEPhi="0" LPEAmpli="255" LPEOffset="127" LPEFine="0" LPEChanType="25" LPEActivChan="1" LPEPHase="0"/>
+     <LPECurveParam LPEType="0" LPEOffset2="0" LPEFade="40" LPEChanNum="0" LPEAllDir="0" LPERatio="502" LPEPhi="0" LPEAmpli="255" LPEOffset="127" LPEFine="0" LPEChanType="26" LPEActivChan="1" LPEPHase="0"/>
+     <LPECurveParam LPEType="0" LPEOffset2="0" LPEFade="40" LPEChanNum="0" LPEAllDir="0" LPERatio="500" LPEPhi="0" LPEAmpli="255" LPEOffset="127" LPEFine="0" LPEChanType="27" LPEActivChan="0" LPEPHase="0"/>
+     <LPECurveParam LPEType="0" LPEOffset2="0" LPEFade="40" LPEChanNum="0" LPEAllDir="0" LPERatio="500" LPEPhi="0" LPEAmpli="255" LPEOffset="127" LPEFine="0" LPEChanType="31" LPEActivChan="0" LPEPHase="0"/>
+    </LPEParams>
+   </LPEffect>
+  </LPEffScene>
+  <LPEffScene LPFadeOut="0" LPPosX="2" LPButtonSize="2" LPLoop="0" LPName="RGBW" LPPosY="0" LPFadeIn="0" LPPriority="1">
+   <LPMainTrigger LPMidiFeedBack="0" LPAutoRelease="0" LPOnOff="1" LPPlayInCurPage="1"/>
+   <LPEffect LPEType="3" LPEDuration="10000" LPEMatrix="0" LPELoops="1" LPEPhi="0" LPEIntensity="100">
+    <LPEParams LPENumber="4">
+     <LPECurveParam LPEType="0" LPEOffset2="0" LPEFade="40" LPEChanNum="0" LPEAllDir="0" LPERatio="502" LPEPhi="0" LPEAmpli="255" LPEOffset="127" LPEFine="0" LPEChanType="25" LPEActivChan="1" LPEPHase="0"/>
+     <LPECurveParam LPEType="0" LPEOffset2="0" LPEFade="40" LPEChanNum="0" LPEAllDir="0" LPERatio="502" LPEPhi="0" LPEAmpli="0" LPEOffset="127" LPEFine="0" LPEChanType="26" LPEActivChan="1" LPEPHase="0"/>
+     <LPECurveParam LPEType="0" LPEOffset2="0" LPEFade="40" LPEChanNum="0" LPEAllDir="0" LPERatio="502" LPEPhi="0" LPEAmpli="0" LPEOffset="127" LPEFine="0" LPEChanType="27" LPEActivChan="0" LPEPHase="0"/>
+     <LPECurveParam LPEType="0" LPEOffset2="0" LPEFade="40" LPEChanNum="0" LPEAllDir="0" LPERatio="502" LPEPhi="0" LPEAmpli="0" LPEOffset="127" LPEFine="0" LPEChanType="31" LPEActivChan="0" LPEPHase="0"/>
+    </LPEParams>
+   </LPEffect>
+  </LPEffScene>
+  <LPEffScene LPFadeOut="0" LPPosX="4" LPButtonSize="2" LPLoop="0" LPName="Rainbow Short" LPPosY="0" LPFadeIn="0" LPPriority="1">
+   <LPMainTrigger LPMidiFeedBack="0" LPAutoRelease="0" LPOnOff="1" LPPlayInCurPage="1"/>
+   <LPEffect LPEFadeTime="1" LPESize="1" LPEComeBack="0" LPEFadeSize="1" LPEIntensity="100" LPEContinue="0" LPESetWChan="0" LPETrichroType="0" LPEType="2" LPENumber="8" LPELoops="1" LPESId="102" LPESens="0" LPEHasFade="1" LPESaturation="0" LPEChannel="-1" LPEPhi="0" LPEDuration="10000">
+    <LPEParams LPENumber="8">
+     <LPETrichroClr LPEClr="0|57|229|255|255|255"/>
+     <LPETrichroClr LPEClr="0|229|229|255|255|255"/>
+     <LPETrichroClr LPEClr="76|254|121|255|255|255"/>
+     <LPETrichroClr LPEClr="191|255|127|255|255|255"/>
+     <LPETrichroClr LPEClr="255|197|25|255|255|255"/>
+     <LPETrichroClr LPEClr="255|25|25|255|255|255"/>
+     <LPETrichroClr LPEClr="255|0|255|255|255|255"/>
+     <LPETrichroClr LPEClr="0|128|128|255|255|255"/>
+    </LPEParams>
+   </LPEffect>
+  </LPEffScene>
+  <LPEffScene LPFadeOut="0" LPPosX="6" LPButtonSize="2" LPLoop="0" LPName="Rainbow Long" LPPosY="0" LPFadeIn="0" LPPriority="1">
+   <LPMainTrigger LPMidiFeedBack="0" LPAutoRelease="0" LPOnOff="1" LPPlayInCurPage="1"/>
+   <LPEffect LPEFadeTime="1" LPESize="40" LPEComeBack="0" LPEFadeSize="1" LPEIntensity="100" LPEContinue="0" LPESetWChan="0" LPETrichroType="0" LPEType="2" LPENumber="8" LPELoops="1" LPESId="103" LPESens="0" LPEHasFade="1" LPESaturation="0" LPEChannel="-1" LPEPhi="0" LPEDuration="10000">
+    <LPEParams LPENumber="8">
+     <LPETrichroClr LPEClr="0|57|229|255|255|255"/>
+     <LPETrichroClr LPEClr="0|229|229|255|255|255"/>
+     <LPETrichroClr LPEClr="76|254|121|255|255|255"/>
+     <LPETrichroClr LPEClr="191|255|127|255|255|255"/>
+     <LPETrichroClr LPEClr="255|197|25|255|255|255"/>
+     <LPETrichroClr LPEClr="255|25|25|255|255|255"/>
+     <LPETrichroClr LPEClr="255|0|255|255|255|255"/>
+     <LPETrichroClr LPEClr="0|128|128|255|255|255"/>
+    </LPEParams>
+   </LPEffect>
+  </LPEffScene>
+  <LPEffScene LPFadeOut="0" LPPosX="8" LPButtonSize="2" LPLoop="0" LPName="Random Color" LPPosY="0" LPFadeIn="0" LPPriority="1">
+   <LPMainTrigger LPMidiFeedBack="0" LPAutoRelease="0" LPOnOff="1" LPPlayInCurPage="1"/>
+   <LPEffect LPEFadeTime="1" LPESize="5" LPEComeBack="0" LPEFadeSize="1" LPEIntensity="100" LPEContinue="0" LPESetWChan="0" LPETrichroType="3" LPEType="2" LPENumber="8" LPELoops="1" LPESId="104" LPESens="0" LPEHasFade="1" LPESaturation="0" LPEChannel="-1" LPEPhi="0" LPEDuration="10000">
+    <LPEParams LPENumber="8">
+     <LPETrichroClr LPEClr="0|0|0|0|0|0"/>
+     <LPETrichroClr LPEClr="0|229|229|255|255|255"/>
+     <LPETrichroClr LPEClr="76|254|121|255|255|255"/>
+     <LPETrichroClr LPEClr="191|255|127|255|255|255"/>
+     <LPETrichroClr LPEClr="255|197|25|255|255|255"/>
+     <LPETrichroClr LPEClr="255|25|25|255|255|255"/>
+     <LPETrichroClr LPEClr="255|0|255|255|255|255"/>
+     <LPETrichroClr LPEClr="0|128|128|255|255|255"/>
+    </LPEParams>
+   </LPEffect>
+  </LPEffScene>
+  <LPEffScene LPFadeOut="0" LPPosX="10" LPButtonSize="2" LPLoop="0" LPName="Random White" LPPosY="0" LPFadeIn="0" LPPriority="1">
+   <LPMainTrigger LPMidiFeedBack="0" LPAutoRelease="0" LPOnOff="1" LPPlayInCurPage="1"/>
+   <LPEffect LPEFadeTime="1" LPESize="5" LPEComeBack="0" LPEFadeSize="1" LPEIntensity="100" LPEContinue="0" LPESetWChan="0" LPETrichroType="3" LPEType="2" LPENumber="2" LPELoops="1" LPESId="105" LPESens="0" LPEHasFade="1" LPESaturation="0" LPEChannel="-1" LPEPhi="0" LPEDuration="10000">
+    <LPEParams LPENumber="2">
+     <LPETrichroClr LPEClr="0|0|0|0|0|0"/>
+     <LPETrichroClr LPEClr="255|255|255|0|0|0"/>
+    </LPEParams>
+   </LPEffect>
+  </LPEffScene>
+  <LPEffScene LPFadeOut="0" LPPosX="12" LPButtonSize="2" LPLoop="0" LPName="Wave" LPPosY="0" LPFadeIn="0" LPPriority="1">
+   <LPMainTrigger LPMidiFeedBack="0" LPAutoRelease="0" LPOnOff="1" LPPlayInCurPage="1"/>
+   <LPEffect LPEFadeTime="1" LPESize="10" LPEComeBack="0" LPEFadeSize="1" LPEIntensity="100" LPEContinue="0" LPESetWChan="0" LPETrichroType="1" LPEType="2" LPENumber="2" LPELoops="1" LPESId="106" LPESens="0" LPEHasFade="1" LPESaturation="0" LPEChannel="-1" LPEPhi="0" LPEDuration="10000">
+    <LPEParams LPENumber="2">
+     <LPETrichroClr LPEClr="0|0|0|0|0|0"/>
+     <LPETrichroClr LPEClr="0|57|229|0|0|0"/>
+    </LPEParams>
+   </LPEffect>
+  </LPEffScene>
+ </LPEffScenes>
+ <LPFadingButs LPNumber="0"/>
+ <LPTimeShow LPNumber="1">
+  <LPTimeLines LPTLKeepPlaying="0" LPTLPage="-1" LPTLLock="0" LPTName="New" LPNumber="3" LPTLLoop="1" LPTLFollowCursor="1" LPTLPlayLen="0" LPTLLockMarker="0" LPTLReleaseAll="0" LPTAudioDev="" LPTLMoveMarker="1" LPTLPlayFrom="1" LPTLen="900000">
+   <LPMainTrigger LPMidiFeedBack="0" LPAutoRelease="0" LPOnOff="1" LPPlayInCurPage="1"/>
+   <LPTimeLine LPName="Music" Type="1" LPTLDisplay="1" LPTLSound="1"/>
+   <LPTimeLine LPName="Video" Type="2" LPTLDisplay="1" LPTLSound="0"/>
+   <LPTimeLine LPName="Line 1" Type="0"/>
+  </LPTimeLines>
+ </LPTimeShow>
+ <LPDevicesConfig LPNumber="1">
+  <LPDevice LPDevCom="0" LPHwUniverses="2" LPStrSerial="B09507" LPDevName="" LPShortName="" LPDevConfig="2|0|2|0|0|-1|0|-1" LPDevGateWay="" LPDevSaMode="0" LPDevSerial="9507" LPLongName="" LPMergeInOut="0" LPDevSpeed="45|146|0|1" LPNodeUniverses="-1|-1|-1|-1|-1" LPDevRef="CQSA 512" LPFirmware="2.4.2.6" LPDevType="12" LPDmxInChan="512" LPDevIp="" LPDevMask="" LPDHCP="0" LPUniverses="2" LPSubNet="0"/>
+ </LPDevicesConfig>
+</LPFile>

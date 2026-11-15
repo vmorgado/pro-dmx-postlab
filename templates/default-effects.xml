@@ -1,0 +1,87 @@
+ <LPEffScenes LPNumber="7">
+  <LPEffScene LPFadeOut="0" LPPosX="0" LPButtonSize="2" LPLoop="0" LPName="RGB" LPPosY="0" LPFadeIn="0" LPPriority="1">
+   <LPMainTrigger LPMidiFeedBack="0" LPAutoRelease="0" LPOnOff="1" LPPlayInCurPage="1"/>
+   <LPEffect LPEType="3" LPEDuration="10000" LPEMatrix="0" LPELoops="1" LPEPhi="0" LPEIntensity="100">
+    <LPEParams LPENumber="4">
+     <LPECurveParam LPEType="0" LPEOffset2="0" LPEFade="40" LPEChanNum="0" LPEAllDir="0" LPERatio="502" LPEPhi="0" LPEAmpli="255" LPEOffset="127" LPEFine="0" LPEChanType="25" LPEActivChan="1" LPEPHase="0"/>
+     <LPECurveParam LPEType="0" LPEOffset2="0" LPEFade="40" LPEChanNum="0" LPEAllDir="0" LPERatio="502" LPEPhi="0" LPEAmpli="255" LPEOffset="127" LPEFine="0" LPEChanType="26" LPEActivChan="1" LPEPHase="0"/>
+     <LPECurveParam LPEType="0" LPEOffset2="0" LPEFade="40" LPEChanNum="0" LPEAllDir="0" LPERatio="500" LPEPhi="0" LPEAmpli="255" LPEOffset="127" LPEFine="0" LPEChanType="27" LPEActivChan="0" LPEPHase="0"/>
+     <LPECurveParam LPEType="0" LPEOffset2="0" LPEFade="40" LPEChanNum="0" LPEAllDir="0" LPERatio="500" LPEPhi="0" LPEAmpli="255" LPEOffset="127" LPEFine="0" LPEChanType="31" LPEActivChan="0" LPEPHase="0"/>
+    </LPEParams>
+   </LPEffect>
+  </LPEffScene>
+  <LPEffScene LPFadeOut="0" LPPosX="2" LPButtonSize="2" LPLoop="0" LPName="RGBW" LPPosY="0" LPFadeIn="0" LPPriority="1">
+   <LPMainTrigger LPMidiFeedBack="0" LPAutoRelease="0" LPOnOff="1" LPPlayInCurPage="1"/>
+   <LPEffect LPEType="3" LPEDuration="10000" LPEMatrix="0" LPELoops="1" LPEPhi="0" LPEIntensity="100">
+    <LPEParams LPENumber="4">
+     <LPECurveParam LPEType="0" LPEOffset2="0" LPEFade="40" LPEChanNum="0" LPEAllDir="0" LPERatio="502" LPEPhi="0" LPEAmpli="255" LPEOffset="127" LPEFine="0" LPEChanType="25" LPEActivChan="1" LPEPHase="0"/>
+     <LPECurveParam LPEType="0" LPEOffset2="0" LPEFade="40" LPEChanNum="0" LPEAllDir="0" LPERatio="502" LPEPhi="0" LPEAmpli="0" LPEOffset="127" LPEFine="0" LPEChanType="26" LPEActivChan="1" LPEPHase="0"/>
+     <LPECurveParam LPEType="0" LPEOffset2="0" LPEFade="40" LPEChanNum="0" LPEAllDir="0" LPERatio="502" LPEPhi="0" LPEAmpli="0" LPEOffset="127" LPEFine="0" LPEChanType="27" LPEActivChan="0" LPEPHase="0"/>
+     <LPECurveParam LPEType="0" LPEOffset2="0" LPEFade="40" LPEChanNum="0" LPEAllDir="0" LPERatio="502" LPEPhi="0" LPEAmpli="0" LPEOffset="127" LPEFine="0" LPEChanType="31" LPEActivChan="0" LPEPHase="0"/>
+    </LPEParams>
+   </LPEffect>
+  </LPEffScene>
+  <LPEffScene LPFadeOut="0" LPPosX="4" LPButtonSize="2" LPLoop="0" LPName="Rainbow Short" LPPosY="0" LPFadeIn="0" LPPriority="1">
+   <LPMainTrigger LPMidiFeedBack="0" LPAutoRelease="0" LPOnOff="1" LPPlayInCurPage="1"/>
+   <LPEffect LPEFadeTime="1" LPESize="1" LPEComeBack="0" LPEFadeSize="1" LPEIntensity="100" LPEContinue="0" LPESetWChan="0" LPETrichroType="0" LPEType="2" LPENumber="8" LPELoops="1" LPESId="102" LPESens="0" LPEHasFade="1" LPESaturation="0" LPEChannel="-1" LPEPhi="0" LPEDuration="10000">
+    <LPEParams LPENumber="8">
+     <LPETrichroClr LPEClr="0|57|229|255|255|255"/>
+     <LPETrichroClr LPEClr="0|229|229|255|255|255"/>
+     <LPETrichroClr LPEClr="76|254|121|255|255|255"/>
+     <LPETrichroClr LPEClr="191|255|127|255|255|255"/>
+     <LPETrichroClr LPEClr="255|197|25|255|255|255"/>
+     <LPETrichroClr LPEClr="255|25|25|255|255|255"/>
+     <LPETrichroClr LPEClr="255|0|255|255|255|255"/>
+     <LPETrichroClr LPEClr="0|128|128|255|255|255"/>
+    </LPEParams>
+   </LPEffect>
+  </LPEffScene>
+  <LPEffScene LPFadeOut="0" LPPosX="6" LPButtonSize="2" LPLoop="0" LPName="Rainbow Long" LPPosY="0" LPFadeIn="0" LPPriority="1">
+   <LPMainTrigger LPMidiFeedBack="0" LPAutoRelease="0" LPOnOff="1" LPPlayInCurPage="1"/>
+   <LPEffect LPEFadeTime="1" LPESize="40" LPEComeBack="0" LPEFadeSize="1" LPEIntensity="100" LPEContinue="0" LPESetWChan="0" LPETrichroType="0" LPEType="2" LPENumber="8" LPELoops="1" LPESId="103" LPESens="0" LPEHasFade="1" LPESaturation="0" LPEChannel="-1" LPEPhi="0" LPEDuration="10000">
+    <LPEParams LPENumber="8">
+     <LPETrichroClr LPEClr="0|57|229|255|255|255"/>
+     <LPETrichroClr LPEClr="0|229|229|255|255|255"/>
+     <LPETrichroClr LPEClr="76|254|121|255|255|255"/>
+     <LPETrichroClr LPEClr="191|255|127|255|255|255"/>
+     <LPETrichroClr LPEClr="255|197|25|255|255|255"/>
+     <LPETrichroClr LPEClr="255|25|25|255|255|255"/>
+     <LPETrichroClr LPEClr="255|0|255|255|255|255"/>
+     <LPETrichroClr LPEClr="0|128|128|255|255|255"/>
+    </LPEParams>
+   </LPEffect>
+  </LPEffScene>
+  <LPEffScene LPFadeOut="0" LPPosX="8" LPButtonSize="2" LPLoop="0" LPName="Random Color" LPPosY="0" LPFadeIn="0" LPPriority="1">
+   <LPMainTrigger LPMidiFeedBack="0" LPAutoRelease="0" LPOnOff="1" LPPlayInCurPage="1"/>
+   <LPEffect LPEFadeTime="1" LPESize="5" LPEComeBack="0" LPEFadeSize="1" LPEIntensity="100" LPEContinue="0" LPESetWChan="0" LPETrichroType="3" LPEType="2" LPENumber="8" LPELoops="1" LPESId="104" LPESens="0" LPEHasFade="1" LPESaturation="0" LPEChannel="-1" LPEPhi="0" LPEDuration="10000">
+    <LPEParams LPENumber="8">
+     <LPETrichroClr LPEClr="0|0|0|0|0|0"/>
+     <LPETrichroClr LPEClr="0|229|229|255|255|255"/>
+     <LPETrichroClr LPEClr="76|254|121|255|255|255"/>
+     <LPETrichroClr LPEClr="191|255|127|255|255|255"/>
+     <LPETrichroClr LPEClr="255|197|25|255|255|255"/>
+     <LPETrichroClr LPEClr="255|25|25|255|255|255"/>
+     <LPETrichroClr LPEClr="255|0|255|255|255|255"/>
+     <LPETrichroClr LPEClr="0|128|128|255|255|255"/>
+    </LPEParams>
+   </LPEffect>
+  </LPEffScene>
+  <LPEffScene LPFadeOut="0" LPPosX="10" LPButtonSize="2" LPLoop="0" LPName="Random White" LPPosY="0" LPFadeIn="0" LPPriority="1">
+   <LPMainTrigger LPMidiFeedBack="0" LPAutoRelease="0" LPOnOff="1" LPPlayInCurPage="1"/>
+   <LPEffect LPEFadeTime="1" LPESize="5" LPEComeBack="0" LPEFadeSize="1" LPEIntensity="100" LPEContinue="0" LPESetWChan="0" LPETrichroType="3" LPEType="2" LPENumber="2" LPELoops="1" LPESId="105" LPESens="0" LPEHasFade="1" LPESaturation="0" LPEChannel="-1" LPEPhi="0" LPEDuration="10000">
+    <LPEParams LPENumber="2">
+     <LPETrichroClr LPEClr="0|0|0|0|0|0"/>
+     <LPETrichroClr LPEClr="255|255|255|0|0|0"/>
+    </LPEParams>
+   </LPEffect>
+  </LPEffScene>
+  <LPEffScene LPFadeOut="0" LPPosX="12" LPButtonSize="2" LPLoop="0" LPName="Wave" LPPosY="0" LPFadeIn="0" LPPriority="1">
+   <LPMainTrigger LPMidiFeedBack="0" LPAutoRelease="0" LPOnOff="1" LPPlayInCurPage="1"/>
+   <LPEffect LPEFadeTime="1" LPESize="10" LPEComeBack="0" LPEFadeSize="1" LPEIntensity="100" LPEContinue="0" LPESetWChan="0" LPETrichroType="1" LPEType="2" LPENumber="2" LPELoops="1" LPESId="106" LPESens="0" LPEHasFade="1" LPESaturation="0" LPEChannel="-1" LPEPhi="0" LPEDuration="10000">
+    <LPEParams LPENumber="2">
+     <LPETrichroClr LPEClr="0|0|0|0|0|0"/>
+     <LPETrichroClr LPEClr="0|57|229|0|0|0"/>
+    </LPEParams>
+   </LPEffect>
+  </LPEffScene>
+ </LPEffScenes>

@@ -1,0 +1,383 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<style>:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
+<title>Postlab Pro DMX</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="Fixture profiles and a ready-to-open Chromateq Pro DMX 2 project for the Postlab lighting rig.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
+<style>
+/* Layout: one reading column (max 46rem) with the DMX universe map as the page's centrepiece; the patch sheet is the subject's own artefact. */
+:root {
+  --bg: #f4f5f8;
+  --surface: #ffffff;
+  --fg: #15171c;
+  --muted: #586070;
+  --line: #dadfe7;
+  --accent: #a85f00;
+  --accent-soft: #fbefdc;
+  --code-bg: #eceff4;
+  --fx-laser: #16916a;
+  --fx-mh: #2f63cc;
+  --fx-hex: #b8327f;
+  --fx-smoke: #6f7686;
+  --free: #e4e8ee;
+  --font-display: "Barlow Condensed", "Arial Narrow", "Helvetica Neue", sans-serif;
+  --font-body: "IBM Plex Sans", -apple-system, "Segoe UI", Roboto, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0f1115; --surface: #171a20; --fg: #e7e9ee; --muted: #9aa1ae; --line: #2a2f39;
+    --accent: #f0a83a; --accent-soft: #2c2213; --code-bg: #1d2128;
+    --fx-laser: #37c98f; --fx-mh: #6c98ff; --fx-hex: #ea69b6; --fx-smoke: #8b92a1; --free: #20242c;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #0f1115; --surface: #171a20; --fg: #e7e9ee; --muted: #9aa1ae; --line: #2a2f39;
+  --accent: #f0a83a; --accent-soft: #2c2213; --code-bg: #1d2128;
+  --fx-laser: #37c98f; --fx-mh: #6c98ff; --fx-hex: #ea69b6; --fx-smoke: #8b92a1; --free: #20242c;
+  color-scheme: dark;
+}
+
+* { box-sizing: border-box; }
+body {
+  background: var(--bg);
+  color: var(--fg);
+  font: 400 1rem/1.6 var(--font-body);
+  -webkit-font-smoothing: antialiased;
+}
+.page {
+  max-width: 46rem;
+  margin: 0 auto;
+  padding-block: 3rem 4rem;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+  display: grid;
+  gap: 3rem;
+}
+@media (min-width: 52rem) {
+  .page { padding-left: max(24px, env(safe-area-inset-left, 0px)); padding-right: max(24px, env(safe-area-inset-right, 0px)); }
+}
+
+h1, h2, h3 { font-family: var(--font-display); text-wrap: balance; margin: 0; line-height: 1.05; }
+h1 { font-size: clamp(2.6rem, 8vw, 4rem); font-weight: 700; letter-spacing: 0.005em; text-transform: uppercase; }
+h2 { font-size: 1.75rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.02em; }
+h3 { font-size: 1.2rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.03em; }
+p { margin: 0; max-width: 65ch; }
+a { color: var(--accent); text-underline-offset: 0.18em; }
+a:focus-visible, button:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; border-radius: 3px; }
+code { font-family: var(--font-mono); font-size: 0.88em; background: var(--code-bg); padding: 0.1em 0.35em; border-radius: 4px; overflow-wrap: anywhere; }
+
+.eyebrow {
+  font-family: var(--font-mono); font-size: 0.75rem; letter-spacing: 0.08em; text-transform: uppercase;
+  color: var(--muted); display: flex; flex-wrap: wrap; gap: 0.25rem 1rem;
+}
+.eyebrow span + span::before { content: "/"; margin-right: 1rem; color: var(--line); }
+header { display: grid; gap: 1rem; }
+header .lead { font-size: 1.125rem; color: var(--fg); }
+header .links { display: flex; flex-wrap: wrap; gap: 0.5rem 1.25rem; font-weight: 500; }
+
+section { display: grid; gap: 1rem; min-width: 0; }
+section > p { color: var(--fg); }
+.muted { color: var(--muted); }
+
+/* Universe map */
+.universe {
+  background: var(--surface); border: 1px solid var(--line); border-radius: 10px;
+  padding: 1.25rem; display: grid; gap: 1rem; min-width: 0;
+}
+.universe-head { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: baseline; gap: 0.5rem 1rem; }
+.legend { display: flex; flex-wrap: wrap; gap: 0.35rem 1rem; font-size: 0.85rem; color: var(--muted); }
+.legend span { display: inline-flex; align-items: center; gap: 0.4rem; }
+.sw { width: 0.75rem; height: 0.75rem; border-radius: 2px; display: inline-block; flex: none; }
+.grid-wrap { display: grid; grid-template-columns: auto 1fr; gap: 0 0.5rem; min-width: 0; }
+.rowlabels { display: grid; grid-template-rows: repeat(16, 1fr); gap: 2px; }
+.rowlabels span { font: 500 0.625rem/1 var(--font-mono); color: var(--muted); display: flex; align-items: center; justify-content: flex-end; font-variant-numeric: tabular-nums; }
+.cells { display: grid; grid-template-columns: repeat(32, minmax(0, 1fr)); gap: 2px; min-width: 0; }
+.cell { aspect-ratio: 1; border-radius: 2px; background: var(--free); border: 0; padding: 0; cursor: default; }
+.cell[data-fx] { cursor: pointer; }
+.cell.start { box-shadow: inset 0 0 0 1.5px var(--surface); }
+.cell.dim { opacity: 0.35; }
+.readout {
+  font-family: var(--font-mono); font-size: 0.85rem; min-height: 1.6em; color: var(--muted);
+  border-top: 1px solid var(--line); padding-top: 0.75rem; font-variant-numeric: tabular-nums;
+  overflow-wrap: anywhere;
+}
+.readout b { color: var(--fg); font-weight: 500; }
+
+/* Steps */
+ol.steps { list-style: none; counter-reset: step; margin: 0; padding: 0; display: grid; gap: 1.25rem; }
+ol.steps > li { counter-increment: step; display: grid; grid-template-columns: 2rem minmax(0, 1fr); gap: 0.75rem; }
+ol.steps > li::before {
+  content: counter(step); font-family: var(--font-display); font-weight: 700; font-size: 1.1rem;
+  width: 2rem; height: 2rem; border-radius: 50%; display: grid; place-items: center;
+  background: var(--accent-soft); color: var(--accent);
+}
+ol.steps > li > div { display: grid; gap: 0.6rem; min-width: 0; padding-top: 0.2rem; }
+
+/* Code */
+.code { position: relative; background: var(--code-bg); border-radius: 8px; min-width: 0; }
+.code pre { margin: 0; padding: 0.9rem 1rem; overflow-x: auto; font: 0.85rem/1.55 var(--font-mono); }
+.code pre .c { color: var(--muted); }
+.copy {
+  position: absolute; top: 0.45rem; right: 0.45rem; font: 500 0.72rem var(--font-body);
+  letter-spacing: 0.04em; text-transform: uppercase; color: var(--muted); background: var(--surface);
+  border: 1px solid var(--line); border-radius: 5px; padding: 0.25rem 0.55rem; cursor: pointer;
+}
+.copy:hover { color: var(--fg); }
+
+/* Tables */
+.table-wrap { overflow-x: auto; min-width: 0; border: 1px solid var(--line); border-radius: 8px; background: var(--surface); }
+table { border-collapse: collapse; width: 100%; font-size: 0.92rem; }
+th, td { text-align: left; padding: 0.6rem 0.85rem; border-bottom: 1px solid var(--line); vertical-align: top; }
+tr:last-child td { border-bottom: 0; }
+th { font: 600 0.72rem var(--font-body); letter-spacing: 0.07em; text-transform: uppercase; color: var(--muted); }
+td.ch { font-family: var(--font-mono); font-variant-numeric: tabular-nums; white-space: nowrap; }
+td .fx { display: inline-flex; align-items: center; gap: 0.5rem; font-weight: 500; white-space: nowrap; }
+
+.callout {
+  border-left: 3px solid var(--accent); background: var(--accent-soft); padding: 0.85rem 1rem;
+  border-radius: 0 6px 6px 0; display: grid; gap: 0.35rem;
+}
+.callout strong { font-weight: 600; }
+
+ul.plain { margin: 0; padding-left: 1.15rem; display: grid; gap: 0.5rem; max-width: 65ch; }
+ul.plain li::marker { color: var(--accent); }
+
+footer { border-top: 1px solid var(--line); padding-top: 1.25rem; font-size: 0.85rem; color: var(--muted); }
+
+@media (max-width: 30rem) {
+  .universe { padding: 0.85rem; }
+  .cells, .rowlabels { gap: 1px; }
+  .rowlabels span { font-size: 0.55rem; }
+  th, td { padding: 0.55rem 0.65rem; }
+}
+@media (prefers-reduced-motion: no-preference) {
+  .cell { transition: opacity 120ms ease; }
+}
+</style>
+</head>
+<body>
+
+<main class="page">
+  <header>
+    <div class="eyebrow"><span>Chromateq Pro DMX 2</span><span>1 universe</span><span>12 fixtures</span></div>
+    <h1>Postlab Pro DMX</h1>
+    <p class="lead">Fixture profiles and a ready-to-open Pro DMX 2 project for the Postlab lighting rig: one laser, two moving heads, eight hexagons and a smoke machine. One Markdown file defines the patch, and a small Python script builds everything else from it.</p>
+    <div class="links">
+      <a href="https://github.com/vmorgado/pro-dmx-postlab">Repository on GitHub</a>
+      <a href="https://github.com/vmorgado/pro-dmx-postlab/blob/main/postlab-lights.md">Channel map (postlab-lights.md)</a>
+    </div>
+  </header>
+
+  <section aria-labelledby="map-h">
+    <div class="universe">
+      <div class="universe-head">
+        <h2 id="map-h">Universe 1</h2>
+        <div class="legend" id="legend"></div>
+      </div>
+      <div class="grid-wrap">
+        <div class="rowlabels" aria-hidden="true" id="rowlabels"></div>
+        <div class="cells" id="cells" role="group" aria-label="DMX channels 1 to 512, 32 per row"></div>
+      </div>
+      <div class="readout" id="readout" aria-live="polite">Hover or tap a channel to see what it controls.</div>
+    </div>
+  </section>
+
+  <section aria-labelledby="start-h">
+    <h2 id="start-h">Quick start</h2>
+    <ol class="steps">
+      <li><div>
+        <p>Clone the repository and install into Pro DMX. You only need Python 3.</p>
+        <div class="code"><button class="copy" type="button">Copy</button><pre>git clone git@github.com:vmorgado/pro-dmx-postlab.git
+cd pro-dmx-postlab
+python3 build.py --install</pre></div>
+        <p class="muted">This copies the profiles to <code>~/Documents/Chromateq/Profiles/Postlab/</code> and the project to <code>~/Documents/Chromateq/Projects/postlab-setup.cq5</code>.</p>
+      </div></li>
+      <li><div><p>In Pro DMX 2, open <code>postlab-setup.cq5</code>. All 12 fixtures are already patched.</p></div></li>
+      <li><div><p>Set each fixture's DMX address to match the patch below, then connect the CQSA 512 interface.</p></div></li>
+    </ol>
+  </section>
+
+  <section aria-labelledby="patch-h">
+    <h2 id="patch-h">Patch</h2>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Fixture</th><th>Profile</th><th>DMX channels</th></tr></thead>
+        <tbody id="patch-body"></tbody>
+      </table>
+    </div>
+    <p class="muted">Every channel of every fixture is listed in <a href="https://github.com/vmorgado/pro-dmx-postlab/blob/main/postlab-lights.md">postlab-lights.md</a>.</p>
+  </section>
+
+  <section aria-labelledby="change-h">
+    <h2 id="change-h">Changing the patch</h2>
+    <p>Edit the <strong>Patch</strong> table in <code>postlab-lights.md</code>. You can change a start or end channel, rename a fixture, or add a row to add a fixture. Then rebuild:</p>
+    <div class="code"><button class="copy" type="button">Copy</button><pre>python3 build.py             <span class="c"># regenerate into the repo only</span>
+python3 build.py --install   <span class="c"># also copy into ~/Documents/Chromateq</span></pre></div>
+    <p>The build stops with an error if two fixtures share a channel, if a row's channel count doesn't match its profile, or if a channel falls outside 1–512.</p>
+    <div class="callout">
+      <strong>Before you program scenes</strong>
+      <p>The build writes a fresh project containing only the patch. Once you've built scenes in Pro DMX, change the patch inside Pro DMX instead, or save under a new name first. <code>--install</code> won't overwrite an installed file that differs from the build unless you add <code>--force</code>, and <code>--force</code> replaces your scenes.</p>
+    </div>
+  </section>
+
+  <section aria-labelledby="profile-h">
+    <h2 id="profile-h">Changing a profile</h2>
+    <p>Profiles are defined in the <code>PROFILES</code> dictionary in <code>build.py</code>. Each channel has a name, a Pro DMX channel type and optional presets. For example, to give the moving head's Color channel named colors once you know the DMX ranges:</p>
+    <div class="code"><button class="copy" type="button">Copy</button><pre>ch("Color", COLOR_WHEEL, [
+    preset("White", 0, 9),
+    preset("Red", 10, 19, 1, LPPresetColor=255),     <span class="c"># color is BGR: 0xBBGGRR</span>
+    preset("Green", 20, 29, 1, LPPresetColor=65280),
+]),</pre></div>
+    <p>Update the channel map in <code>postlab-lights.md</code> to match, then rebuild. The channel type matters because Pro DMX effects use it to decide what they control. For example, the laser's three <em>Pan Y</em> heads are typed as tilt, so tilt effects move all three together.</p>
+  </section>
+
+  <section aria-labelledby="layout-h">
+    <h2 id="layout-h">What's in the repository</h2>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Path</th><th>What it is</th></tr></thead>
+        <tbody>
+          <tr><td><code>postlab-lights.md</code></td><td>Source of truth: patch table and channel map</td></tr>
+          <tr><td><code>build.py</code></td><td>Generates profiles and project, optionally installs them</td></tr>
+          <tr><td><code>profiles/*.cp1</code></td><td>Pro DMX fixture profiles (generated)</td></tr>
+          <tr><td><code>postlab-setup.cq5</code>, <code>.ls5</code></td><td>Pro DMX 2 project (generated)</td></tr>
+          <tr><td><code>templates/default-effects.xml</code></td><td>The stock effect buttons Pro DMX puts in new projects</td></tr>
+          <tr><td><code>docs/index.html</code></td><td>This page</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section aria-labelledby="formats-h">
+    <h2 id="formats-h">File formats</h2>
+    <p>Chromateq doesn't document these formats. They were worked out from files Pro DMX 2.3.4 writes, and <code>build.py</code> reproduces Pro DMX's own files byte for byte.</p>
+    <ul class="plain">
+      <li><strong>.cp1 and .ls5:</strong> a 4-byte big-endian length, followed by zlib-compressed XML.</li>
+      <li><strong>.cq5:</strong> plain XML. The profiles are embedded in <code>&lt;LPPatch&gt;</code>, and <code>LPAddress</code> counts from 0, so DMX channel 40 is stored as <code>LPAddress="39"</code>.</li>
+    </ul>
+  </section>
+
+  <section aria-labelledby="open-h">
+    <h2 id="open-h">Open items</h2>
+    <ul class="plain">
+      <li>Hexagons 6–8 are placed at CH 090, 100 and 110, following the pattern of the first five. Confirm them against the fixtures.</li>
+      <li>Check whether the smoke machine (CH 512) keeps running during blackout. If it doesn't, add a DMX mask in Pro DMX.</li>
+      <li>The moving heads have no named color or gobo presets yet because their DMX ranges are unknown.</li>
+    </ul>
+  </section>
+
+  <footer>Postlab Pro DMX · <a href="https://github.com/vmorgado/pro-dmx-postlab">github.com/vmorgado/pro-dmx-postlab</a></footer>
+</main>
+
+<script>
+(function () {
+  var TYPES = {
+    laser: { label: "Laser", color: "var(--fx-laser)" },
+    mh: { label: "Moving head", color: "var(--fx-mh)" },
+    hex: { label: "Hexagon", color: "var(--fx-hex)" },
+    smoke: { label: "Smoke", color: "var(--fx-smoke)" }
+  };
+  var CH = {
+    laser: ["Pan X", "Continuous Pan X", "Pan Y Head 1", "Pan Y Head 2", "Pan Y Head 3", "Pan Speed", "Dimmer", "Strobe", "Automatic Color", "Automatic Show", "Automatic Speed", "Red", "Green", "Blue", "White", "Reset"],
+    mh: ["Pan", "Tilt", "Color", "Gobo", "Strobe", "Dimmer", "Tilt Speed", "Auto", "Reset"],
+    hex: ["Dimmer", "Red", "Green", "Blue", "Strobe (0–7 off, 8–255 slow→fast)", "Mode (solid, gradient, pulse, jump, sound)", "Speed (for Mode)"],
+    smoke: ["Smoke output"]
+  };
+  var PROFILE = { laser: "Postlab Laser", mh: "Postlab Moving Head", hex: "Postlab Hexagon", smoke: "Postlab Smoke" };
+  var PATCH = [["Laser", "laser", 1], ["Moving Head 1", "mh", 20], ["Moving Head 2", "mh", 30]];
+  for (var i = 1; i <= 8; i++) PATCH.push(["Hexagon " + i, "hex", 30 + 10 * i]);
+  PATCH.push(["Smoke", "smoke", 512]);
+
+  function pad(n) { return String(n).padStart(3, "0"); }
+
+  var owner = {};
+  PATCH.forEach(function (p, idx) {
+    CH[p[1]].forEach(function (name, k) { owner[p[2] + k] = { fx: idx, type: p[1], name: p[0], fn: name, first: k === 0 }; });
+  });
+
+  var legend = document.getElementById("legend");
+  Object.keys(TYPES).forEach(function (t) {
+    var s = document.createElement("span");
+    s.innerHTML = '<i class="sw" style="background:' + TYPES[t].color + '"></i>' + TYPES[t].label;
+    legend.appendChild(s);
+  });
+
+  var labels = document.getElementById("rowlabels");
+  for (var r = 0; r < 16; r++) {
+    var l = document.createElement("span");
+    l.textContent = pad(r * 32 + 1);
+    labels.appendChild(l);
+  }
+
+  var cells = document.getElementById("cells");
+  var readout = document.getElementById("readout");
+  var all = [];
+  for (var c = 1; c <= 512; c++) {
+    var o = owner[c];
+    var el = document.createElement("button");
+    el.type = "button";
+    el.className = "cell" + (o && o.first ? " start" : "");
+    el.dataset.ch = c;
+    if (o) {
+      el.dataset.fx = o.fx;
+      el.style.background = TYPES[o.type].color;
+      el.setAttribute("aria-label", "Channel " + c + ", " + o.name + ", " + o.fn);
+    } else {
+      el.tabIndex = -1;
+      el.setAttribute("aria-label", "Channel " + c + ", free");
+    }
+    cells.appendChild(el);
+    all.push(el);
+  }
+
+  function show(el) {
+    var c = +el.dataset.ch, o = owner[c];
+    all.forEach(function (x) { x.classList.toggle("dim", !!o && x.dataset.fx !== String(o.fx)); });
+    readout.innerHTML = o
+      ? "<b>CH " + pad(c) + "</b> · " + o.name + " · " + o.fn
+      : "<b>CH " + pad(c) + "</b> · free";
+  }
+  function clear() {
+    all.forEach(function (x) { x.classList.remove("dim"); });
+    readout.textContent = "Hover or tap a channel to see what it controls.";
+  }
+  cells.addEventListener("pointerover", function (e) { if (e.target.classList.contains("cell")) show(e.target); });
+  cells.addEventListener("click", function (e) { if (e.target.classList.contains("cell")) show(e.target); });
+  cells.addEventListener("focusin", function (e) { if (e.target.classList.contains("cell")) show(e.target); });
+  cells.addEventListener("pointerleave", clear);
+
+  var body = document.getElementById("patch-body");
+  PATCH.forEach(function (p) {
+    var n = CH[p[1]].length, tr = document.createElement("tr");
+    var range = n === 1 ? pad(p[2]) : pad(p[2]) + "–" + pad(p[2] + n - 1);
+    tr.innerHTML = '<td><span class="fx"><i class="sw" style="background:' + TYPES[p[1]].color + '"></i>' + p[0] + "</span></td><td>" + PROFILE[p[1]] + '</td><td class="ch">' + range + "</td>";
+    body.appendChild(tr);
+  });
+
+  document.querySelectorAll(".copy").forEach(function (btn) {
+    btn.addEventListener("click", function () {
+      var pre = btn.parentElement.querySelector("pre");
+      var text = pre.innerText.split("\n").map(function (l) { return l.replace(/\s+#.*$/, ""); }).join("\n").trim();
+      function done(msg) { btn.textContent = msg; setTimeout(function () { btn.textContent = "Copy"; }, 1500); }
+      function fallback() {
+        var range = document.createRange(); range.selectNodeContents(pre);
+        var sel = window.getSelection(); sel.removeAllRanges(); sel.addRange(range);
+        done("Selected");
+      }
+      try {
+        navigator.clipboard.writeText(text).then(function () { done("Copied"); }, fallback);
+      } catch (e) { fallback(); }
+    });
+  });
+})();
+</script>
+</body>
+</html>
